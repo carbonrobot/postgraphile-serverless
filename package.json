@@ -1,0 +1,15 @@
+{
+  "name": "postgraphile-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/carbonrobot/postgraphile-serverless.git",
+  "author": "Charles Brown <carbonrobot@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.62.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.3.1"
+  }
+}

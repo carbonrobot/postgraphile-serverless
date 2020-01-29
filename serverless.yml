@@ -1,0 +1,17 @@
+service: postgraphile-serverless
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  vpc:
+    securityGroupIds:
+      - ${cf.${opt.project}-outputs.VPCSecurityGroupId}
+    subnetIds:
+      - ${cf.${opt.project}-outputs.VPCPrivateSubnets}
+    
+functions:
+  hello:
+    handler: src/index.handler
+  events:
+    - http: ANY /
+    - http: 'ANY {proxy+}'
